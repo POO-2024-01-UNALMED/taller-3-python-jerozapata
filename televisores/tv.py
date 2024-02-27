@@ -1,5 +1,5 @@
 class TV:
-    num_tv = 0
+    numTv = 0
 
     def __init__(self, marca, estado):
         self.marca = marca
@@ -8,65 +8,65 @@ class TV:
         self.volumen = 1
         self.precio = 500
 
-        TV.num_tv += 1
+        TV.numTv += 1
 
     @staticmethod
-    def get_num_tv():
-        return TV.num_tv
+    def getNumTv():
+        return TV.numTv
 
     @staticmethod
-    def set_num_tv(num_tv):
-        TV.num_tv = num_tv
+    def setNumTv(num_tv):
+        TV.numTv = numTv
 
-    def turn_on(self):
+    def turnOn(self):
         self.estado = True
 
-    def turn_off(self):
+    def turnOff(self):
         self.estado = False
 
-    def canal_up(self):
-        self.set_canal(self.canal + 1)
+    def canalUp(self):
+        self.setCanal(self.canal + 1)
 
-    def canal_down(self):
-        self.set_canal(self.canal - 1)
+    def canalDown(self):
+        self.setCanal(self.canal - 1)
 
-    def volumen_up(self):
-        self.set_volumen(self.volumen + 1)
+    def volumenUp(self):
+        self.setVolumen(self.volumen + 1)
 
-    def volumen_down(self):
-        self.set_volumen(self.volumen - 1)
+    def volumenDown(self):
+        self.setVolumen(self.volumen - 1)
 
-    def get_marca(self):
+    def getMarca(self):
         return self.marca
 
-    def get_canal(self):
+    def getCanal(self):
         return self.canal
 
-    def get_precio(self):
+    def getPrecio(self):
         return self.precio
 
-    def get_estado(self):
+    def getEstado(self):
         return self.estado
 
-    def get_volumen(self):
+    def getVolumen(self):
         return self.volumen
 
-    def get_control(self):
+    def getControl(self):
         return self.control
 
-    def set_marca(self, marca):
+    def setMarca(self, marca):
         self.marca = marca
 
-    def set_canal(self, canal):
+    def setCanal(self, canal):
         if self.estado and 1 <= canal <= 120:
             self.canal = canal
 
-    def set_precio(self, precio):
+    def setPrecio(self, precio):
         self.precio = precio
 
-    def set_volumen(self, volumen):
+    def setVolumen(self, volumen):
         if self.estado and 0 <= volumen <= 7:
             self.volumen = volumen
 
-    def set_control(self, control):
+    def setControl(self, control):
         self.control = control
