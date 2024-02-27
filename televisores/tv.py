@@ -11,7 +11,7 @@ class TV:
         TV.numTv += 1
 
     @staticmethod
-    def getNumTv():
+    def getNumTV():
         return TV.numTv
 
     @staticmethod
